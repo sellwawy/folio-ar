@@ -3,14 +3,8 @@
 import { cn } from '@/utils'
 import SectionHeading from './ui/SectionHeading'
 import { Button } from './ui/Button'
-import { useActionState } from 'react'
-import { submetContactForm } from '@/actions/action'
 
 function Contact({}) {
-   const [state, action, isLoading] = useActionState(submetContactForm, {
-      email: '',
-      message: '',
-   })
    return (
       <section id="contact" className="py-spacing-12">
          <div className="wrapper">
@@ -23,11 +17,14 @@ function Contact({}) {
                   </a>{' '}
                   أو من خلال هذا النموذج.
                </p>
-               <form action={action} className="px- w-full max-w-[50rem] rounded-lg py-spacing-8">
+               <form
+                  action={async (FormData) => {
+                     alert([FormData.get('email'), FormData.get('message')])
+                  }}
+                  className="px- w-full max-w-[50rem] rounded-lg py-spacing-8">
                   <div className="md-up:flex mt-4">
                      {/* Email */}
                      <input
-                        defaultValue={String(state.email) ?? ''}
                         className="border-secondary w-full rounded-lg border-2 p-2 focus:outline-teal-500"
                         type="email"
                         name="email"
@@ -39,7 +36,6 @@ function Contact({}) {
                   </div>
                   {/* Message */}
                   <textarea
-                     defaultValue={String(state.message) ?? ''}
                      rows={4}
                      placeholder="الرسالة"
                      required
@@ -49,7 +45,7 @@ function Contact({}) {
                   />
                   {/* Submit */}
                   <Button type="submit" className={'text-quinary'}>
-                     {isLoading ? 'إرسال...' : 'إرسال'}
+                     إرسال
                   </Button>
                </form>
             </div>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>الوثيقة</title>
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <header>
+         <h1>
+            توثيق مشروع <br />
+            <strong class="main-title">بسيط | قالب رياكت ونكست السيرة الذاتية ومعرض الأعمال</strong>
+         </h1>
+         <p>
+            <strong
+               >تاريخ الإنشاء: 03/10/2024<br />
+               البريد الإلكتروني: sellwawy@gmail.com</strong
+            >
+         </p>
+      </header>
+
+      <h2 id="toc" class="alt">جدول المحتويات</h2>
+      <ul class="alpha">
+         <li>1. <a href="#introduction">المقدمة</a></li>
+         <li>2. <a href="#installation">التثبيت</a></li>
+         <li>3. <a href="#customization">التخصيص</a></li>
+         <li>4. <a href="#deployment">النشر</a></li>
+         <li>5. <a href="#support">الدعم</a></li>
+      </ul>
+
+      <section id="introduction">
+         <h2>1. المقدمة - <a href="#toc">الأعلى</a></h2>
+
+         <p>
+            بسيط هو موقع موقع صفحة واحدة للسيرة الذاتية ومعرض الأعمال تفاعلي، متجاوب بالكامل وقابل للتخصيص،
+            مبني باستخدام <strong>Next.js</strong> و <strong>Tailwind CSS</strong>.
+         </p>
+
+         <h3>الميزات الأساسية:</h3>
+         <ul>
+            <li>مبني باستخدام <strong>React.js</strong> و <strong>Next.js</strong></li>
+            <li>متجاوب تمامًا وصديق للأجهزة المحمولة</li>
+            <li><strong>Tailwind CSS</strong> لتسهيل التخصيص</li>
+            <li><strong>محسن لمحركات البحث (SEO)</strong> بفضل تحسينات Next.js</li>
+            <li>
+               <strong>أفضل الممارسات</strong> مثل:
+               <ul>
+                  <li>استخدام أداة Cn مع حزم clsx و twMerge</li>
+                  <li>
+                     استخدام أداة Class Variance Authority (cva) لإدارة أسماء الفئات (CSS) بناءً على شروط
+                     مختلفة.
+                  </li>
+               </ul>
+            </li>
+            <li>جاهز للنشر على منصات مثل <strong>Vercel</strong> و <strong>Netlify</strong> وغيرها.</li>
+         </ul>
+      </section>
+
+      <section id="installation">
+         <h2>2. التثبيت - <a href="#toc">الأعلى</a></h2>
+
+         <h3>المتطلبات الأساسية:</h3>
+         <p>تأكد من تثبيت العناصر التالية على جهازك:</p>
+         <ul>
+            <li><strong>Node.js</strong> (الإصدار 12.x أو أعلى)</li>
+            <li><strong>npm</strong> أو <strong>yarn</strong></li>
+         </ul>
+
+         <h3>خطوات التشغيل محليًا:</h3>
+         <ol>
+            <li><strong>افتح مجلد المشروع في محرر النصوص الخاص بك.</strong></li>
+            <li><strong>قم بتثبيت الحزم:</strong></li>
+            <pre><code>npm install</code></pre>
+            <p>أو إذا كنت تستخدم yarn:</p>
+            <pre><code>yarn install</code></pre>
+
+            <li><strong>تشغيل خادم التطوير:</strong></li>
+            <pre><code>npm run dev</code></pre>
+            <p>أو إذا كنت تستخدم yarn:</p>
+            <pre><code>yarn dev</code></pre>
+            <p>سيكون الموقع متاحًا على <code>http://localhost:3000</code>.</p>
+         </ol>
+      </section>
+
+      <section id="customization">
+         <h2>3. التخصيص - <a href="#toc">الأعلى</a></h2>
+         <p><strong>المجلدات الرئيسية:</strong></p>
+         <ul>
+            <li><strong>public/</strong>: ضع فيه الملفات الثابتة مثل الصور والأيقونات.</li>
+            <li>
+               <strong>src/components/</strong>: يحتوي على المكونات القابلة لإعادة الاستخدام مثل الهيدر،
+               الفوتر، والأقسام المختلفة.
+            </li>
+            <li>
+               <strong>src/app/globals.css</strong>: تخصيص إعدادات Tailwind مثل الألوان والتباعد وأحجام
+               الخطوط.
+            </li>
+            <li>
+               <strong>src/app/layout</strong>: تخصيص البيانات الوصفية (Metadata) لتحسين محركات البحث وتغير
+               الخطوط.
+            </li>
+            <li><strong>src/components/Hero</strong>: تخصيص قسم المقدمة (Hero).</li>
+            <li><strong>src/components/About</strong>: تخصيص قسم "من نحن".</li>
+            <li>
+               <strong>src/constants/*</strong>: تخصيص روابط شريط التنقل، أيقونات التواصل الاجتماعي، قسم
+               الخبرات، وقسم الأعمال.
+            </li>
+         </ul>
+      </section>
+
+      <section id="deployment">
+         <h2>4. النشر - <a href="#toc">الأعلى</a></h2>
+
+         <h3>النشر على Vercel:</h3>
+         <ol>
+            <li>ادفع (Push) مشروعك إلى مستودع GitHub.</li>
+            <li>
+               انتقل إلى <a href="https://vercel.com/">Vercel</a>، سجل الدخول باستخدام GitHub، وقم باستيراد
+               مستودعك.
+            </li>
+            <li>سيكتشف Vercel تلقائيًا أنك تستخدم Next.js وسيقوم بإعداد البيئة اللازمة.</li>
+            <li>بمجرد النشر، سيعطيك Vercel رابطًا حيث سيكون مشروعك متاحًا.</li>
+         </ol>
+
+         <h3>النشر على Netlify:</h3>
+         <ol>
+            <li>ادفع (Push) مشروعك إلى مستودع GitHub.</li>
+            <li>انتقل إلى <a href="https://netlify.com/">Netlify</a>، قم بتسجيل الدخول واستيراد مستودعك.</li>
+            <li>اختر <strong>Next.js</strong> كإطار العمل.</li>
+            <li>قم بنشر موقعك.</li>
+         </ol>
+      </section>
+
+      <section id="support">
+         <h2>5. الدعم</h2>
+         <p>إذا واجهت أي مشاكل أثناء استخدام منتجي، لا تتردد في التواصل معي عبر sellwawy@gmail.com.</p>
+      </section>
+   </body>
+</html>
