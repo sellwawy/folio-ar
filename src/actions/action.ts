@@ -1,9 +1,9 @@
 'use server'
-
-export async function submetContactForm(previousState: string, formData: FormData) {
+export async function submetContactForm(
+   previousState: { email: FormDataEntryValue | null; message: FormDataEntryValue | null },
+   formData: FormData,
+) {
    const email = formData.get('email')
    const message = formData.get('message')
-   console.log(email, message)
-
    return { email, message }
 }
